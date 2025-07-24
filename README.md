@@ -29,7 +29,7 @@ git --version
 
 ```bash
 # Clonar el proyecto
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/Enmamosley/website-showcase
 
 # Navegar al directorio del proyecto
 cd website-showcase
