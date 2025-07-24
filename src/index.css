@@ -9,14 +9,18 @@
 
 /* Desktop Preview */
 .browser-preview-frame.desktop {
-  width: 100%;
+  width: 1200px;
   height: 700px;
+  transform-origin: top left;
+  transform: scale(0.85);
 }
 
 /* Tablet Preview */
 .browser-preview-frame.tablet {
   width: 768px;
-  height: 600px;
+  height: 700px;
+  transform-origin: top left;
+  transform: scale(0.9);
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
@@ -24,4 +28,9 @@
 /* Mobile Preview */
 .browser-preview-frame.mobile {
   width: 375px;
+  height: 700px;
+  transform-origin: top left;
+  transform: scale(1.2);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
