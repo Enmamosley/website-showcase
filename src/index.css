@@ -9,8 +9,8 @@
 
 /* Desktop Preview */
 .browser-preview-frame.desktop {
-  width: 1200px;
-  height: 800px;
+  width: 1800px;
+  height: 1200px;
   transform-origin: top left;
   transform: scale(0.5);
 }

@@ -133,7 +133,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                       'h-[840px] flex justify-center'
                     }`}>
                     <div className={`w-full ${
-                      viewMode === 'desktop' ? 'h-[400px]' : 
+                      viewMode === 'desktop' ? 'h-[600px]' : 
                       viewMode === 'tablet' ? 'h-[630px] flex justify-center' : 
                       'h-[840px] flex justify-center'
                     }`}>
