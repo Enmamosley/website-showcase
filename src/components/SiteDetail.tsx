@@ -149,11 +149,13 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         transformOrigin: 'center center'
                       }}>
                         <iframe
+                          id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
                           src={site.url}
-                          className="w-full h-full border-0"
+                          className="browser-preview-frame w-full h-full border-0"
+                          sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
+                          loading="lazy"
                           onLoad={() => setIframeLoaded(true)}
                           title={`${viewMode} preview of ${site.name}`}
-                          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                         />
                       </div>
                     </div>
