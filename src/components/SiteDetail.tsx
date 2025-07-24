@@ -129,13 +129,13 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                     )}
                     <div className={`w-full ${
                       viewMode === 'desktop' ? 'h-[600px]' : 
-                      viewMode === 'tablet' ? 'h-[630px] flex justify-center' : 
-                      'h-[840px] flex justify-center'
+                      viewMode === 'tablet' ? 'h-[538px] flex justify-center' : 
+                      'h-[896px] flex justify-center'
                     }`}>
                     <div className={`w-full ${
                       viewMode === 'desktop' ? 'h-[600px]' : 
-                      viewMode === 'tablet' ? 'h-[630px] flex justify-center' : 
-                      'h-[840px] flex justify-center'
+                      viewMode === 'tablet' ? 'h-[538px] flex justify-center' : 
+                      'h-[896px] flex justify-center'
                     }`}>
                       <iframe
                         id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
