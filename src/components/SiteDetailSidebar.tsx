@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Tag, CheckCircle } from 'lucide-react';
+import { ExternalLink, Tag, CheckCircle } from 'lucide-react';
 import { Site } from '../types/Site';
 
 interface SiteDetailSidebarProps {
@@ -32,44 +33,44 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
   return (
     <div className="space-y-6">
       {/* Purchase Card */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <div className="text-center mb-6">
-          <h1 className="text-xl font-bold text-gray-900 mb-3">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-gray-900 mb-6">
             {site.name}
           </h1>
+
+          <ul className="space-y-4 mb-8">
+            <li className="flex items-center gap-3 text-gray-600">
+              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+              <span>Pago único</span>
+            </li>
+            <li className="flex items-center gap-3 text-gray-600">
+              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+              <span>Listo en 48 horas</span>
+            </li>
+            <li className="flex items-center gap-3 text-gray-600">
+              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+              <span>Hosting gratis de por vida</span>
+            </li>
+            <li className="flex items-center gap-3 text-gray-600">
+              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+              <span>Actualizaciones gratuitas</span>
+            </li>
+          </ul>
         </div>
 
-        <ul className="space-y-3 mb-6">
-          <li className="flex items-center gap-3 text-sm text-gray-600">
-            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Pago único</span>
-          </li>
-          <li className="flex items-center gap-3 text-sm text-gray-600">
-            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Listo en 48 horas</span>
-          </li>
-          <li className="flex items-center gap-3 text-sm text-gray-600">
-            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Hosting gratis de por vida</span>
-          </li>
-          <li className="flex items-center gap-3 text-sm text-gray-600">
-            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Actualizaciones gratuitas</span>
-          </li>
-        </ul>
-
-        <div className="space-y-3">
+        <div className="space-y-4">
           <a
             href={site.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full bg-white border border-blue-600 text-blue-600 font-medium py-2.5 px-4 rounded-md hover:bg-blue-50 transition-colors text-center block text-sm"
+            className="w-full bg-white border-2 border-blue-600 text-blue-600 font-medium py-3 px-4 rounded-lg hover:bg-blue-50 transition-colors text-center block"
           >
             Ver el sitio
           </a>
           <button
             onClick={() => setShowContactForm(true)}
-            className="w-full bg-blue-600 text-white font-medium py-2.5 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
+            className="w-full bg-blue-600 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors"
           >
             ¡Lo quiero!
           </button>
@@ -77,50 +78,50 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
       </div>
 
       {/* Theme Information */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-        <h4 className="text-lg font-semibold text-gray-900 text-center py-4 border-b border-gray-200">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200">
+        <h4 className="text-xl font-semibold text-gray-900 text-center py-6 border-b border-gray-200">
           Información del sitio
         </h4>
         
-        <div className="p-4">
-          <div className="space-y-4 text-sm">
-            <div className="flex items-center justify-between py-2">
+        <div className="p-6">
+          <div className="space-y-5">
+            <div className="flex items-center justify-between py-1">
               <span className="text-gray-600">Actualizado:</span>
               <span className="font-medium text-gray-900">{site.updated}</span>
             </div>
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between py-1">
               <span className="text-gray-600">Lanzado:</span>
               <span className="font-medium text-gray-900">{site.released}</span>
             </div>
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between py-1">
               <span className="text-gray-600">Tipo de producto:</span>
               <span className="font-medium text-gray-900 uppercase">{site.category}</span>
             </div>
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between py-1">
               <span className="text-gray-600">Versión de Astro:</span>
               <span className="font-medium text-gray-900">{site.version}</span>
             </div>
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between py-1">
               <span className="text-gray-600">Google PageSpeed:</span>
               <span className="font-medium text-gray-900">{site.themeVersion}</span>
             </div>
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between py-1">
               <span className="text-gray-600">Changelog:</span>
               <button 
                 onClick={() => setShowChangelog(!showChangelog)}
-                className="bg-blue-100 text-blue-600 px-3 py-1 rounded text-xs font-medium hover:bg-blue-200 transition-colors"
+                className="bg-blue-100 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-200 transition-colors"
               >
                 Mostrar →
               </button>
             </div>
           </div>
 
-          <div className="mt-4 pt-4 border-t border-gray-200 text-center">
+          <div className="mt-6 pt-6 border-t border-gray-200 text-center">
             <a
               href={site.documentation}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 border border-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors inline-block"
+              className="text-blue-600 border-2 border-blue-600 px-6 py-2.5 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-block"
             >
               Ver Documentación
             </a>
@@ -130,18 +131,18 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
 
       {/* Testimonial */}
       {site.testimonial && (
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-          <blockquote className="text-sm text-gray-600 italic mb-4 leading-relaxed">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <blockquote className="text-gray-600 italic mb-6 leading-relaxed">
             "{site.testimonial.quote}"
           </blockquote>
           <div className="flex items-center gap-3">
             <img
               src={site.testimonial.avatar}
               alt={site.testimonial.author}
-              className="w-10 h-10 rounded-full object-cover"
+              className="w-12 h-12 rounded-full object-cover"
             />
             <div>
-              <div className="font-medium text-gray-900 text-sm flex items-center gap-1">
+              <div className="font-medium text-gray-900 flex items-center gap-1">
                 {site.testimonial.author}
                 {site.testimonial.link && (
                   <a
@@ -154,20 +155,20 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                   </a>
                 )}
               </div>
-              <div className="text-xs text-gray-500">{site.testimonial.role}</div>
+              <div className="text-sm text-gray-500">{site.testimonial.role}</div>
             </div>
           </div>
         </div>
       )}
 
       {/* Tags */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-        <h4 className="text-base font-semibold text-gray-900 mb-3">Tags</h4>
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h4 className="text-lg font-semibold text-gray-900 mb-4">Tags</h4>
         <div className="flex flex-wrap gap-2">
           {site.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center gap-1 text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-md hover:bg-gray-200 transition-colors"
+              className="inline-flex items-center gap-1 text-sm text-gray-600 bg-gray-100 px-3 py-1.5 rounded-lg hover:bg-gray-200 transition-colors"
             >
               <Tag className="w-3 h-3" />
               {tag}
