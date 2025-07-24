@@ -121,10 +121,10 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                   
                   <div className={`browser-preview-body relative bg-gray-100 rounded-b-lg overflow-hidden transition-all duration-300 ${
                     viewMode === 'desktop' 
-                      ? 'h-64 sm:h-80 md:h-96 lg:h-[450px] xl:h-[550px]' 
+                      ? 'h-80 sm:h-96 md:h-[450px] lg:h-[550px] xl:h-[650px]' 
                       : viewMode === 'tablet'
-                      ? 'h-80 sm:h-96 md:h-[450px] lg:h-[500px] xl:h-[550px]'
-                      : 'h-[500px] sm:h-[550px] md:h-[600px] lg:h-[650px]'
+                      ? 'h-96 sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[650px]'
+                      : 'h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px]'
                   }`}>
                     {!iframeLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
