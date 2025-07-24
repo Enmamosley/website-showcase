@@ -15,20 +15,20 @@ export const PricingCard: React.FC<PricingCardProps> = ({ plan, siteName }) => {
       {plan.isPopular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white text-xs font-semibold px-4 py-1 rounded-full">
-            MOST POPULAR
+            Más Popular
           </span>
         </div>
       )}
       
       <div className="flex-grow">
         <h3 className="text-xl font-bold text-gray-900 mb-2">
-          {plan.id === 'individual' && siteName ? siteName : plan.name}
+          {plan.id === 'id' && siteName ? siteName : plan.name}
         </h3>
         <p className="text-sm text-gray-600 mb-4">{plan.description}</p>
         
         {plan.originalPrice && (
           <div className="mb-2">
-            <span className="text-sm text-red-500 line-through">ORIGINALLY ${plan.originalPrice}</span>
+            <span className="text-sm text-red-500 line-through">NORMALMENTE ${plan.originalPrice}</span>
             {plan.discount && (
               <span className="bg-green-500 text-white text-xs px-2 py-1 rounded ml-2">
                 {plan.discount}

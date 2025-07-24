@@ -13,7 +13,7 @@ export const mosley: Site = {
   subtitle: 'Security SaaS & Startup Theme',
   framework: 'React + Tailwind',
   version: '5.4.1',
-  themeVersion: '2.1.0',
+  themeVersion: '93/100',
   updated: '5 months ago',
   released: '12 months ago',
   documentation: 'https://docs.themefisher.com/fortify-astro/',

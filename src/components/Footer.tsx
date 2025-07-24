@@ -12,10 +12,10 @@ export const Footer: React.FC = () => {
           <div className="mb-4 md:mb-0">
             <div className="flex items-center gap-2 mb-2">
               <Globe className="w-5 h-5 text-blue-600" />
-              <span className="text-lg font-bold text-gray-900">Website Showcase</span>
+              <span className="text-lg font-bold text-gray-900">Splanding.dev</span>
             </div>
             <p className="text-sm text-gray-600">
-              Discover beautiful, modern websites crafted with attention to detail
+              Descubre sitios web hermosos y modernos elaborados con atención al detalle
             </p>
           </div>
 
@@ -26,27 +26,27 @@ export const Footer: React.FC = () => {
                 href="#" 
                 className="hover:text-blue-600 transition-colors"
               >
-                About
+                Sobre mi
               </a>
               <a 
                 href="#" 
                 className="hover:text-blue-600 transition-colors"
               >
-                Contact
+                Contacto
               </a>
               <a 
                 href="#" 
                 className="hover:text-blue-600 transition-colors flex items-center gap-1"
               >
-                Documentation
+                Soporte
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>
             
             <div className="flex items-center gap-1 text-sm text-gray-500">
-              <span>Made with</span>
+              <span>Hecho con</span>
               <Heart className="w-4 h-4 text-red-500 fill-current" />
-              <span>© {currentYear}</span>
+              <span>Por Mosley</span>
             </div>
           </div>
         </div>
@@ -55,14 +55,14 @@ export const Footer: React.FC = () => {
         <div className="mt-6 pt-6 border-t border-gray-100">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-gray-500">
             <div className="mb-2 sm:mb-0">
-              <span>Built with React, TypeScript & Tailwind CSS</span>
+              <span>Todos los derechos resevados</span>
             </div>
             <div className="flex items-center gap-4">
               <a href="#" className="hover:text-gray-700 transition-colors">
-                Privacy Policy
+                Política de privacidad
               </a>
               <a href="#" className="hover:text-gray-700 transition-colors">
-                Terms of Service
+                Terminos de servicio
               </a>
             </div>
           </div>

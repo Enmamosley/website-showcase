@@ -20,7 +20,6 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const screenshotUrl = `https://screenshot.so/${encodeURIComponent(site.url)}?width=1200&height=800&format=webp`;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -33,7 +32,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
               className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
-              Back to Catalog
+              Volver al listado
             </button>
             <div className="h-6 w-px bg-gray-300" />
             <div className="flex items-center gap-2">
@@ -64,7 +63,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                           <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
                           <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
                         </div>
-                        <span className="text-xs md:text-sm text-gray-600 ml-2 md:ml-4 hidden sm:inline">Live Preview is Loaded</span>
+                        <span className="text-xs md:text-sm text-gray-600 ml-2 md:ml-4 hidden sm:inline">La vista previa está cargada</span>
                       </div>
                       
                       {/* Preview Controls in Header */}
@@ -159,14 +158,14 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
               {/* Theme Description */}
               <div className="mt-6 lg:mt-8 py-4 lg:py-5 pr-0 lg:pr-8">
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-3">
-                  Theme Description
+                  Descripción del sitio
                 </h3>
                 <div className="prose prose-gray max-w-none">
                   <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-4 lg:mb-6">
                     {site.description}
                   </p>
                   
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">Key Features</h4>
+                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">Características principales</h4>
                   <ul className="space-y-2 lg:space-y-3 text-sm lg:text-base text-gray-600">
                     {site.keyFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
@@ -192,10 +191,10 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Choose Perfect Plan For You
+              Elige el plan perfecto para ti
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Find the right package that fits your development goals and budget
+              Encuentra el paquete adecuado que se ajuste a tus objetivos y presupuesto
             </p>
           </div>
 
@@ -216,22 +215,12 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                 <CheckCircle className="w-3 h-3 text-white" />
               </div>
               <span className="text-gray-600">
-                100% Safe and Secure Payments Powered by - <strong>paddle</strong>
+                Pagos 100% seguros y protegidos con tecnología de - <strong>MercadoPago</strong>
               </span>
             </div>
             
             <div className="flex items-center justify-center gap-4 flex-wrap">
-              <div className="w-10 h-6 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">VISA</div>
-              <div className="w-10 h-6 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold">PP</div>
-              <div className="w-10 h-6 bg-red-500 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
-              <div className="w-10 h-6 bg-blue-400 rounded text-white text-xs flex items-center justify-center font-bold">AE</div>
-              <div className="w-10 h-6 bg-orange-500 rounded text-white text-xs flex items-center justify-center font-bold">DS</div>
-              <div className="w-10 h-6 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">M</div>
-              <div className="w-10 h-6 bg-gray-700 rounded text-white text-xs flex items-center justify-center font-bold">AP</div>
-              <div className="w-10 h-6 bg-green-500 rounded text-white text-xs flex items-center justify-center font-bold">GP</div>
-              <div className="w-10 h-6 bg-blue-700 rounded text-white text-xs flex items-center justify-center font-bold">JCB</div>
-              <div className="w-10 h-6 bg-gray-600 rounded text-white text-xs flex items-center justify-center font-bold">D</div>
-            </div>
+                         </div>
           </div>
         </div>
       </section>

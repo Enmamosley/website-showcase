@@ -70,7 +70,7 @@ export const SiteCard: React.FC<SiteCardProps> = ({ site, onClick }) => {
           className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-2 px-3 lg:px-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] text-sm lg:text-base"
           onClick={onClick}
         >
-          View Details
+          Ver detalles
         </button> 
       </div>
     </div>

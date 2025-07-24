@@ -42,19 +42,19 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
         <ul className="space-y-3 mb-6">
           <li className="flex items-center gap-3 text-sm text-gray-600">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>One-time Payment</span>
+            <span>Pago único</span>
           </li>
           <li className="flex items-center gap-3 text-sm text-gray-600">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Instant Access</span>
+            <span>Listo en 48 horas</span>
           </li>
           <li className="flex items-center gap-3 text-sm text-gray-600">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Commercial License</span>
+            <span>Hosting gratis de por vida</span>
           </li>
           <li className="flex items-center gap-3 text-sm text-gray-600">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-            <span>Free Updates</span>
+            <span>Actualizaciones gratuitas</span>
           </li>
         </ul>
 
@@ -65,7 +65,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
             rel="noopener noreferrer"
             className="w-full bg-white border border-blue-600 text-blue-600 font-medium py-2.5 px-4 rounded-md hover:bg-blue-50 transition-colors text-center block text-sm"
           >
-            Live Preview
+            Ver el sitio
           </a>
           <button
             onClick={() => setShowContactForm(true)}
@@ -85,23 +85,23 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
         <div className="p-4">
           <div className="space-y-4 text-sm">
             <div className="flex items-center justify-between py-2">
-              <span className="text-gray-600">Updated:</span>
+              <span className="text-gray-600">Actualizado:</span>
               <span className="font-medium text-gray-900">{site.updated}</span>
             </div>
             <div className="flex items-center justify-between py-2">
-              <span className="text-gray-600">Released:</span>
+              <span className="text-gray-600">Lanzado:</span>
               <span className="font-medium text-gray-900">{site.released}</span>
             </div>
             <div className="flex items-center justify-between py-2">
-              <span className="text-gray-600">Product Type:</span>
+              <span className="text-gray-600">Tipo de producto:</span>
               <span className="font-medium text-gray-900 uppercase">{site.category}</span>
             </div>
             <div className="flex items-center justify-between py-2">
-              <span className="text-gray-600">Astro Version:</span>
+              <span className="text-gray-600">Versión de Astro:</span>
               <span className="font-medium text-gray-900">{site.version}</span>
             </div>
             <div className="flex items-center justify-between py-2">
-              <span className="text-gray-600">Theme Version:</span>
+              <span className="text-gray-600">Google PageSpeed:</span>
               <span className="font-medium text-gray-900">{site.themeVersion}</span>
             </div>
             <div className="flex items-center justify-between py-2">
@@ -110,7 +110,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                 onClick={() => setShowChangelog(!showChangelog)}
                 className="bg-blue-100 text-blue-600 px-3 py-1 rounded text-xs font-medium hover:bg-blue-200 transition-colors"
               >
-                Show →
+                Mostrar →
               </button>
             </div>
           </div>
@@ -122,7 +122,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
               rel="noopener noreferrer"
               className="text-blue-600 border border-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors inline-block"
             >
-              View Documentation
+              Ver Documentación
             </a>
           </div>
         </div>
@@ -224,7 +224,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                      Nombre Completo *
                     </label>
                     <input
                       type="text"
@@ -237,7 +237,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                      Dirección de Email *
                     </label>
                     <input
                       type="email"
@@ -250,23 +250,23 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Type
+                      Tipo de Proyecto
                     </label>
                     <select
                       value={formData.projectType}
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="similar">Similar to {site.name}</option>
-                      <option value="custom">Custom Design</option>
-                      <option value="redesign">Website Redesign</option>
-                      <option value="maintenance">Website Maintenance</option>
+                      <option value="similar">Similar a {site.name}</option>
+                      <option value="custom">Diseño Personalizado</option>
+                      <option value="redesign">Rediseño de Sitio Web</option>
+                      <option value="maintenance">Mantenimiento de Sitio Web</option>
                     </select>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Details
+                      Detalles del Proyecto
                     </label>
                     <textarea
                       value={formData.message}
@@ -284,21 +284,21 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                     onClick={() => setShowContactForm(false)}
                     className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    Cancel
+                    Cancelar
                   </button>
                   <button
                     type="submit"
                     className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    Send Message
+                    Enviar Mensaje
                   </button>
                 </div>
               </form>
             ) : (
               <div className="p-6 text-center">
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                <p className="text-gray-600">We'll get back to you within 24 hours.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Mensaje Enviado!</h3>
+                <p className="text-gray-600">Nos pondremos en contacto contigo en 24 horas.</p>
               </div>
             )}
           </div>
