@@ -147,6 +147,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         title={`${viewMode} preview of ${site.name}`}
                       />
                     </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -216,7 +217,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
             </div>
             
             <div className="flex items-center justify-center gap-4 flex-wrap">
-                         </div>
+            </div>
           </div>
         </div>
       </section>
