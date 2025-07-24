@@ -49,7 +49,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
           <div className="grid grid-cols-1 xl:grid-cols-5 gap-6 lg:gap-8">
             
             {/* Left Column - Preview and Description */}
-            <div className="xl:col-span-3">
+            <div className="xl:col-span-4">
               
               {/* Live Preview */}
               <div className="mb-6 lg:mb-7">
@@ -170,7 +170,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
             </div>
 
             {/* Right Column - Sidebar */}
-            <div className="xl:col-span-2">
+            <div className="xl:col-span-1">
               <SiteDetailSidebar site={site} />
             </div>
           </div>
