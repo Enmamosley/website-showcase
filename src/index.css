@@ -19,7 +19,7 @@
 .browser-preview-frame.tablet {
   width: 1024px;
   height: 768px;
-  transform-origin: top left;
+  transform-origin: top center;
   transform: scale(0.7);
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -29,8 +29,8 @@
 .browser-preview-frame.mobile {
   width: 414px;
   height: 896px;
-  transform-origin: top left;
-  transform: scale(1.0);
+  transform-origin: top center;
+  transform: scale(0.9);
   border-radius: 20px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
