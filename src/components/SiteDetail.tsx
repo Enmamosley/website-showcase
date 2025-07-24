@@ -127,7 +127,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         </div>
                       </div>
                     )}
-                    <div className={`w-full overflow-hidden ${
+                    <div className={`w-full overflow-x-auto ${
                       viewMode === 'desktop' ? 'h-[600px]' : 
                       viewMode === 'tablet' ? 'h-[630px] flex justify-center' : 
                       'h-[840px] flex justify-center'
