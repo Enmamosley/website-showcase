@@ -46,7 +46,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
       {/* Main Content */}
       <section className="section overflow-hidden pt-6 md:pt-12">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-5 gap-6 lg:gap-8">
             
             {/* Left Column - Preview and Description */}
             <div className="xl:col-span-3">
@@ -170,7 +170,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
             </div>
 
             {/* Right Column - Sidebar */}
-            <div className="xl:col-span-1">
+            <div className="xl:col-span-2">
               <SiteDetailSidebar site={site} />
             </div>
           </div>
