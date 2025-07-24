@@ -133,24 +133,30 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         </div>
                       </div>
                     )}
-                    <iframe
-                      src={site.url}
-                      className={`h-full border-0 transition-all duration-300 ease-in-out transform will-change-transform ${
+                    <div className="w-full h-full flex items-center justify-center overflow-hidden">
+                      <div className={`relative transition-all duration-300 ease-in-out ${
                         viewMode === 'desktop' 
-                          ? 'w-full scale-100' 
+                          ? 'w-full h-full' 
                           : viewMode === 'tablet'
-                          ? 'w-[768px] mx-auto scale-90'
-                          : 'w-[375px] mx-auto scale-85'
-                      }`}
-                      onLoad={() => setIframeLoaded(true)}
-                      title={`${viewMode} preview of ${site.name}`}
-                      sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                      style={{
-                        backfaceVisibility: 'hidden',
-                        perspective: '1000px',
-                        transformStyle: 'preserve-3d'
-                      }}
-                    />
+                          ? 'w-[768px] h-[1024px] shadow-2xl rounded-lg overflow-hidden'
+                          : 'w-[375px] h-[667px] shadow-2xl rounded-[20px] overflow-hidden border-4 border-gray-800'
+                      }`} style={{
+                        transform: viewMode === 'desktop' 
+                          ? 'scale(1)' 
+                          : viewMode === 'tablet'
+                          ? 'scale(0.6)'
+                          : 'scale(0.8)',
+                        transformOrigin: 'center center'
+                      }}>
+                        <iframe
+                          src={site.url}
+                          className="w-full h-full border-0"
+                          onLoad={() => setIframeLoaded(true)}
+                          title={`${viewMode} preview of ${site.name}`}
+                          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
