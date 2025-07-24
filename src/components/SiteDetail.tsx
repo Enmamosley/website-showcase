@@ -46,10 +46,10 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
       {/* Main Content */}
       <section className="section overflow-hidden pt-6 md:pt-12">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             
             {/* Left Column - Preview and Description */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-2">
               
               {/* Live Preview */}
               <div className="mb-6 lg:mb-7">
