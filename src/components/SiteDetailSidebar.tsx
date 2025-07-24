@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ExternalLink, Tag, CheckCircle } from 'lucide-react';
-import { ExternalLink, Tag, CheckCircle } from 'lucide-react';
 import { Site } from '../types/Site';
 
 interface SiteDetailSidebarProps {
