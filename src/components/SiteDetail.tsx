@@ -46,10 +46,10 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
       {/* Main Content */}
       <section className="section overflow-hidden pt-6 md:pt-12">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 lg:gap-8">
             
             {/* Left Column - Preview and Description */}
-            <div className="lg:col-span-2">
+            <div className="xl:col-span-3">
               
               {/* Live Preview */}
               <div className="mb-6 lg:mb-7">
@@ -119,13 +119,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                     </div>
                   </div>
                   
-                  <div className={`browser-preview-body relative bg-gray-100 rounded-b-lg overflow-hidden transition-all duration-300 ${
-                    viewMode === 'desktop' 
-                      ? 'h-[664px]' 
-                      : viewMode === 'tablet'
-                      ? 'h-[768px]'
-                      : 'h-[600px]'
-                  }`}>
+                  <div className="browser-preview-body relative bg-white rounded-b-lg overflow-hidden">
                     {!iframeLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
                         <div className="text-gray-500 transition-opacity duration-300">
@@ -133,16 +127,20 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         </div>
                       </div>
                     )}
-                    <div className="w-full h-full flex items-center justify-center overflow-hidden">
+                    <div className={`w-full overflow-hidden ${
+                      viewMode === 'desktop' ? 'h-[700px]' : 
+                      viewMode === 'tablet' ? 'h-[600px] flex justify-center' : 
+                      'h-[500px] flex justify-center'
+                    }`}>
                       <iframe
-                          id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
-                          src={site.url}
-                          className={`browser-preview-frame ${viewMode}`}
-                          sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
-                          loading="lazy"
-                          onLoad={() => setIframeLoaded(true)}
-                          title={`${viewMode} preview of ${site.name}`}
-                        />
+                        id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
+                        src={site.url}
+                        className={`browser-preview-frame ${viewMode}`}
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
+                        loading="lazy"
+                        onLoad={() => setIframeLoaded(true)}
+                        title={`${viewMode} preview of ${site.name}`}
+                      />
                     </div>
                   </div>
                 </div>
@@ -172,7 +170,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
             </div>
 
             {/* Right Column - Sidebar */}
-            <div className="lg:col-span-1">
+            <div className="xl:col-span-1">
               <SiteDetailSidebar site={site} />
             </div>
           </div>
