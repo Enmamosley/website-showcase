@@ -3,8 +3,36 @@
 @tailwind utilities;
 
 .browser-preview-frame {
-  border: none;
-  width: 100%;
-  height: 100%;
+  border-style: none;
   display: block;
+}
+
+/* Desktop Preview */
+.browser-preview-frame.desktop {
+  height: 980px;
+  width: 1303px;
+  transform-origin: top left;
+  --tw-scale-x: 0.677;
+  --tw-scale-y: 0.677;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* Tablet Preview */
+.browser-preview-frame.tablet {
+  height: 1024px;
+  width: 768px;
+  transform-origin: top left;
+  --tw-scale-x: 0.75;
+  --tw-scale-y: 0.75;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* Mobile Preview */
+.browser-preview-frame.mobile {
+  height: 667px;
+  width: 375px;
+  transform-origin: top left;
+  --tw-scale-x: 0.9;
+  --tw-scale-y: 0.9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

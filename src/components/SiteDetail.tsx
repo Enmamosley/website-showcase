@@ -121,10 +121,10 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                   
                   <div className={`browser-preview-body relative bg-gray-100 rounded-b-lg overflow-hidden transition-all duration-300 ${
                     viewMode === 'desktop' 
-                      ? 'h-80 sm:h-96 md:h-[450px] lg:h-[550px] xl:h-[650px]' 
+                      ? 'h-[664px]' 
                       : viewMode === 'tablet'
-                      ? 'h-96 sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[650px]'
-                      : 'h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px]'
+                      ? 'h-[768px]'
+                      : 'h-[600px]'
                   }`}>
                     {!iframeLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
@@ -134,30 +134,15 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                       </div>
                     )}
                     <div className="w-full h-full flex items-center justify-center overflow-hidden">
-                      <div className={`relative transition-all duration-300 ease-in-out ${
-                        viewMode === 'desktop' 
-                          ? 'w-full h-full' 
-                          : viewMode === 'tablet'
-                          ? 'w-[768px] h-[1024px] shadow-2xl rounded-lg overflow-hidden'
-                          : 'w-[375px] h-[667px] shadow-2xl rounded-[20px] overflow-hidden border-4 border-gray-800'
-                      }`} style={{
-                        transform: viewMode === 'desktop' 
-                          ? 'scale(1)' 
-                          : viewMode === 'tablet'
-                          ? 'scale(0.6)'
-                          : 'scale(0.8)',
-                        transformOrigin: 'center center'
-                      }}>
-                        <iframe
+                      <iframe
                           id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
                           src={site.url}
-                          className="browser-preview-frame w-full h-full border-0"
+                          className={`browser-preview-frame ${viewMode}`}
                           sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
                           loading="lazy"
                           onLoad={() => setIframeLoaded(true)}
                           title={`${viewMode} preview of ${site.name}`}
                         />
-                      </div>
                     </div>
                   </div>
                 </div>
