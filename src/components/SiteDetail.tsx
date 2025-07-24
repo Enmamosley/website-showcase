@@ -121,10 +121,10 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                   
                   <div className={`browser-preview-body relative bg-gray-100 rounded-b-lg overflow-hidden transition-all duration-300 ${
                     viewMode === 'desktop' 
-                      ? 'h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] 2xl:h-[600px]' 
+                      ? 'h-64 sm:h-80 md:h-96 lg:h-[450px] xl:h-[550px]' 
                       : viewMode === 'tablet'
-                      ? 'h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]'
-                      : 'h-96 sm:h-[500px] md:h-[600px] lg:h-[700px]'
+                      ? 'h-80 sm:h-96 md:h-[450px] lg:h-[500px] xl:h-[550px]'
+                      : 'h-[500px] sm:h-[550px] md:h-[600px] lg:h-[650px]'
                   }`}>
                     {!iframeLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
@@ -139,8 +139,8 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         viewMode === 'desktop' 
                           ? 'w-full scale-100' 
                           : viewMode === 'tablet'
-                          ? 'w-[834px] mx-auto'
-                          : 'w-[413px] mx-auto'
+                          ? 'w-[768px] mx-auto scale-90'
+                          : 'w-[375px] mx-auto scale-85'
                       }`}
                       onLoad={() => setIframeLoaded(true)}
                       title={`${viewMode} preview of ${site.name}`}
