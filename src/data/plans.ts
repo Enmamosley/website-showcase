@@ -59,7 +59,7 @@ export const pricingPlans: Plan[] = [
     originalPrice: "4,199",
     price: "2,999",
     discount: '33% OFF',
-    period: 'Sin cargos adicionales',
+    period: '+ Tarifa de procesamiento anual',
     access: 'Tarifa anual $300',
     projects: '',
     users: 'Up to 5 Users',
