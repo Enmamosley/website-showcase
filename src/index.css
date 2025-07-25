@@ -58,11 +58,21 @@
   width: 414px;
   height: 896px;
   transform-origin: center center;
-  transform: scale(0.6);
+  transform: scale(0.5);
   border-radius: 35px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 0 0 4px #1a1a1a, 0 0 0 6px #333;
   background: #1a1a1a;
   position: relative;
+}
+
+@media (max-width: 640px) {
+  .browser-preview-frame.mobile {
+    transform: scale(0.35);
+  }
+  
+  .browser-preview-frame.tablet {
+    transform: scale(0.3);
+  }
 }
 
 .browser-preview-frame.mobile::before {

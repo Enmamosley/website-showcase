@@ -37,13 +37,13 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 lg:py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="mb-4 md:mb-0">
-              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                 Splanding
               </h1>
-              <p className="text-sm lg:text-base text-gray-600">
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600">
                 Descubra sitios web hermosos y modernos diseñados con atención al detalle.
               </p>
             </div>
@@ -73,12 +73,12 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
 
       {/* Featured Section */}
       {featuredSites.length > 0 && (
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+        <section className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
           <div className="flex items-center gap-2 mb-6">
             <Sparkles className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-500" />
-            <h2 className="text-xl lg:text-2xl font-bold text-gray-900">Sitios web destacados</h2>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Sitios web destacados</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-6 lg:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 mb-4 sm:mb-6 lg:mb-8">
             {featuredSites.map((site) => (
               <SiteCard
                 key={site.id}
@@ -91,7 +91,7 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
       )}
 
       {/* Filters */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-4">
+      <section className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 lg:py-4">
         <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-6 lg:mb-8">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 lg:w-5 lg:h-5" />
@@ -100,7 +100,7 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
               placeholder="Buscar sitios web, categorías o etiquetas..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-9 lg:pl-10 pr-3 lg:pr-4 py-2 lg:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm lg:text-base"
+              className="w-full pl-8 sm:pl-9 lg:pl-10 pr-3 lg:pr-4 py-2 lg:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm lg:text-base"
             />
           </div>
           <div className="flex items-center gap-2">
@@ -121,26 +121,26 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
       </section>
 
       {/* Results */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pb-8 lg:pb-12">
+      <section className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pb-6 sm:pb-8 lg:pb-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
             Todos los sitios web
-            <span className="text-base lg:text-lg font-normal text-gray-500 ml-2">
+            <span className="text-sm sm:text-base lg:text-lg font-normal text-gray-500 ml-2">
               ({filteredSites.length} results)
             </span>
           </h2>
         </div>
 
         {filteredSites.length === 0 ? (
-          <div className="text-center py-8 lg:py-12">
+          <div className="text-center py-6 sm:py-8 lg:py-12">
             <div className="text-gray-400 mb-4">
               <Search className="w-8 h-8 lg:w-12 lg:h-12 mx-auto" />
             </div>
-            <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-2">No se encontraron sitios web</h3>
+            <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-2">No se encontraron sitios web</h3>
             <p className="text-sm lg:text-base text-gray-600">Intente ajustar sus términos de búsqueda o filtros</p>
           </div>
         ) : (
-          <div className={`grid gap-4 lg:gap-6 ${
+          <div className={`grid gap-3 sm:gap-4 lg:gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'

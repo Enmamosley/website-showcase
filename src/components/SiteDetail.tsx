@@ -32,70 +32,70 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 lg:py-6">
           <div className="mb-4">
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6">
               <div className="flex items-center gap-2 mb-2">
-                <Globe className="w-5 h-5 text-blue-600" />
-                <span className="text-2xl lg:text-3xl font-bold text-gray-900">Splanding</span>
+                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">Splanding</span>
               </div>
-              <p className="text-sm lg:text-base text-gray-600">
+              <p className="text-xs sm:text-sm lg:text-base text-gray-600">
                 Descubra sitios web hermosos y modernos diseñados con atención al detalle.
               </p>
             </div>
             
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <button
                 onClick={onBack}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base"
               >
-                <ArrowLeft className="w-5 h-5" />
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                 Volver al listado
               </button>
-              <div className="h-6 w-px bg-gray-300" />
-              <span className="text-sm lg:text-base text-gray-600">
-                Viendo detalles de <span className="font-semibold">{site.name}</span>
+              <div className="hidden sm:block h-6 w-px bg-gray-300" />
+              <span className="text-xs sm:text-sm lg:text-base text-gray-600">
+                Viendo: <span className="font-semibold">{site.name}</span>
               </span>
               
               {/* Site Switcher Dropdown */}
-              <div className="relative ml-4">
+              <div className="relative sm:ml-4">
                 <button
                   onClick={() => setShowSiteDropdown(!showSiteDropdown)}
-                  className="flex items-center gap-2 px-3 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+                  className="flex items-center gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-xs sm:text-sm w-full sm:w-auto justify-between sm:justify-start"
                 >
                   <span className="text-gray-700">Cambiar sitio</span>
-                  <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${showSiteDropdown ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-gray-500 transition-transform ${showSiteDropdown ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {showSiteDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-80 overflow-y-auto">
+                  <div className="absolute top-full left-0 right-0 sm:left-0 sm:right-auto mt-2 w-full sm:w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 sm:max-h-80 overflow-y-auto">
                     <div className="p-2">
-                      <div className="text-xs font-medium text-gray-500 uppercase tracking-wide px-3 py-2 mb-1">
+                      <div className="text-xs font-medium text-gray-500 uppercase tracking-wide px-2 sm:px-3 py-2 mb-1">
                         Seleccionar sitio
                       </div>
                       {sites.map((siteOption) => (
                         <button
                           key={siteOption.id}
                           onClick={() => handleSiteChange(siteOption)}
-                          className={`w-full text-left px-3 py-2 rounded-md hover:bg-gray-50 transition-colors flex items-center gap-3 ${
+                          className={`w-full text-left px-2 sm:px-3 py-2 rounded-md hover:bg-gray-50 transition-colors flex items-center gap-2 sm:gap-3 ${
                             siteOption.id === site.id ? 'bg-blue-50 text-blue-700' : 'text-gray-700'
                           }`}
                         >
                           <img
                             src={siteOption.image}
                             alt={siteOption.name}
-                            className="w-8 h-8 rounded object-cover flex-shrink-0"
+                            className="w-6 h-6 sm:w-8 sm:h-8 rounded object-cover flex-shrink-0"
                           />
                           <div className="flex-1 min-w-0">
-                            <div className="font-medium text-sm truncate">
+                            <div className="font-medium text-xs sm:text-sm truncate">
                               {siteOption.name}
                             </div>
-                            <div className="text-xs text-gray-500 truncate">
+                            <div className="text-xs text-gray-500 truncate hidden sm:block">
                               {siteOption.category}
                             </div>
                           </div>
                           {siteOption.id === site.id && (
-                            <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
                           )}
                         </button>
                       ))}
@@ -110,7 +110,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
 
       {/* Main Content */}
       <section className="section overflow-hidden pt-6 md:pt-12">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8">
             
             {/* Left Column - Preview and Description */}
@@ -120,7 +120,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
               <div className="mb-6 lg:mb-7">
 
                 <div className="browser-preview">
-                  <div className="browser-preview-header bg-gray-100 px-3 md:px-4 py-2 md:py-3 border-b border-gray-200 rounded-t-lg">
+                  <div className="browser-preview-header bg-gray-100 px-2 sm:px-3 md:px-4 py-2 md:py-3 border-b border-gray-200 rounded-t-lg">
                     <div className="flex items-center justify-between text-sm md:text-base">
                       <div className="flex items-center gap-2">
                         <div className="flex gap-1.5">
@@ -128,7 +128,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                           <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-400"></div>
                           <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-400"></div>
                         </div>
-                        <span className="text-xs md:text-sm text-gray-600 ml-2 md:ml-4 hidden sm:inline">La vista previa está cargada</span>
+                        <span className="text-xs md:text-sm text-gray-600 ml-2 md:ml-4 hidden md:inline">La vista previa está cargada</span>
                       </div>
                       
                       {/* Preview Controls in Header */}
@@ -186,7 +186,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                   
                   <div className="browser-preview-body relative bg-white rounded-b-lg overflow-hidden">
                     {!iframeLoaded && (
-                      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
+                      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 text-sm">
                         <div className="text-gray-500 transition-opacity duration-300">
                           Loading {viewMode} preview...
                         </div>
@@ -194,8 +194,8 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                     )}
                     <div className={`w-full ${
                       viewMode === 'desktop' ? 'h-[600px]' : 
-                      viewMode === 'tablet' ? 'h-[580px] flex justify-center items-center bg-gray-100 py-8' : 
-                      'h-[580px] flex justify-center items-center bg-gray-100 py-8'
+                      viewMode === 'tablet' ? 'h-[400px] sm:h-[580px] flex justify-center items-center bg-gray-100 py-4 sm:py-8' : 
+                      'h-[400px] sm:h-[580px] flex justify-center items-center bg-gray-100 py-4 sm:py-8'
                     }`}>
                       <iframe
                         id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
@@ -212,7 +212,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
               </div>
 
               {/* Theme Description */}
-              <div className="mt-6 lg:mt-8 py-4 lg:py-5 pr-0 lg:pr-8">
+              <div className="mt-4 sm:mt-6 lg:mt-8 py-4 lg:py-5 pr-0 lg:pr-8">
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-3">
                   Descripción del sitio
                 </h3>
@@ -224,7 +224,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                   <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">Características principales</h4>
                   <ul className="space-y-2 lg:space-y-3 text-sm lg:text-base text-gray-600">
                     {site.keyFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
+                      <li key={index} className="flex items-start gap-2 sm:gap-3">
                         <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
@@ -244,17 +244,17 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
 
       {/* Pricing Plans Section - Independent Section */}
       <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Elige el plan perfecto para ti
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Encuentra el paquete adecuado que se ajuste a tus objetivos y presupuesto
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch mb-8 sm:mb-12">
             {pricingPlans.map((plan) => (
               <PricingCard 
                 key={plan.id} 
@@ -266,11 +266,11 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
 
           {/* Security Section */}
           <div className="text-center">
-            <div className="flex items-center justify-center gap-2 mb-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4 sm:mb-6">
               <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
                 <CheckCircle className="w-3 h-3 text-white" />
               </div>
-              <span className="text-gray-600">
+              <span className="text-sm sm:text-base text-gray-600 text-center">
                 Pagos 100% seguros y protegidos con tecnología de - <strong>MercadoPago</strong>
               </span>
             </div>
