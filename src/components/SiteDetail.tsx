@@ -132,11 +132,6 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                       viewMode === 'tablet' ? 'h-[538px] flex justify-center' : 
                       'h-[896px] flex justify-center'
                     }`}>
-                    <div className={`w-full ${
-                      viewMode === 'desktop' ? 'h-[600px]' : 
-                      viewMode === 'tablet' ? 'h-[600px] flex justify-center items-center' : 
-                      'h-[600px] flex justify-center items-center'
-                    }`}>
                       <iframe
                         id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
                         src={site.url}
@@ -146,7 +141,6 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         onLoad={() => setIframeLoaded(true)}
                         title={`${viewMode} preview of ${site.name}`}
                       />
-                    </div>
                     </div>
                   </div>
                 </div>
