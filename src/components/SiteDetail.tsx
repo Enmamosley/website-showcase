@@ -10,10 +10,10 @@ import { Footer } from './Footer';
 interface SiteDetailProps {
   site: Site;
   onBack: () => void;
-  onSiteChange: (site: Site) => void;
+  onSiteSelect: (site: Site) => void;
 }
 
-export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteChange }) => {
+export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSelect }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [viewMode, setViewMode] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
   const [showSiteDropdown, setShowSiteDropdown] = useState(false);
@@ -25,7 +25,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteChan
 
   const handleSiteChange = (newSite: Site) => {
     setShowSiteDropdown(false);
-    onSiteChange(newSite);
+    onSiteSelect(newSite);
   };
 
   return (
