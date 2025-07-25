@@ -25,9 +25,9 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="mb-4 md:mb-0">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+          <div className="mb-4">
+            <div className="mb-6">
               <div className="flex items-center gap-2 mb-2">
                 <Globe className="w-5 h-5 text-blue-600" />
                 <span className="text-2xl lg:text-3xl font-bold text-gray-900">Splanding</span>
@@ -36,26 +36,23 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                 Descubra sitios web hermosos y modernos diseñados con atención al detalle.
               </p>
             </div>
+            
+            <div className="flex items-center gap-4">
+              <button
+                onClick={onBack}
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                Volver al listado
+              </button>
+              <div className="h-6 w-px bg-gray-300" />
+              <span className="text-sm lg:text-base text-gray-600">
+                Viendo detalles de <span className="font-semibold">{site.name}</span>
+              </span>
+            </div>
           </div>
         </div>
       </header>
-
-      {/* Navigation Section */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Volver al listado
-          </button>
-          <div className="h-6 w-px bg-gray-300" />
-          <span className="text-sm lg:text-base text-gray-600">
-            Viendo detalles de <span className="font-semibold">{site.name}</span>
-          </span>
-        </div>
-      </section>
 
       {/* Main Content */}
       <section className="section overflow-hidden pt-6 md:pt-12">
