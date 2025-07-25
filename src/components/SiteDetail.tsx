@@ -15,13 +15,54 @@ interface SiteDetailProps {
 
 export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSelect }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
-  const [viewMode, setViewMode] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
+  const [viewMode, setViewMode] = useState<'desktop' | 'tablet' | 'mobile'>(() => {
+    // Detectar si es dispositivo móvil y establecer vista móvil por defecto
+    if (typeof window !== 'undefined') {
+      const isMobile = window.innerWidth < 768; // md breakpoint
+      return isMobile ? 'mobile' : 'desktop';
+    }
+    return 'desktop';
+  });
   const [showSiteDropdown, setShowSiteDropdown] = useState(false);
 
   // Asegurar que la página inicie desde arriba
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Listener para cambios de tamaño de ventana
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile && viewMode === 'desktop') {
+        setViewMode('mobile');
+      } else if (!isMobile && viewMode === 'mobile' && window.innerWidth >= 1024) {
+        setViewMode('desktop');
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Efecto para manejar cambios de viewMode basado en el tamaño de pantalla
+  React.useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+      const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+      
+      // Auto-ajustar vista según el dispositivo
+      if (isMobile && viewMode !== 'mobile') {
+        setViewMode('mobile');
+      } else if (isTablet && viewMode === 'desktop') {
+        setViewMode('tablet');
+      }
+    };
+
+    // Ejecutar al montar el componente
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [viewMode]);
 
   const handleSiteChange = (newSite: Site) => {
     setShowSiteDropdown(false);
