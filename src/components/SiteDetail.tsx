@@ -134,8 +134,8 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                     }`}>
                     <div className={`w-full ${
                       viewMode === 'desktop' ? 'h-[600px]' : 
-                      viewMode === 'tablet' ? 'h-[650px] flex justify-center items-center' : 
-                      'h-[650px] flex justify-center items-center'
+                      viewMode === 'tablet' ? 'h-[600px] flex justify-center items-center' : 
+                      'h-[600px] flex justify-center items-center'
                     }`}>
                       <iframe
                         id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
