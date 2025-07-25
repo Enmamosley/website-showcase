@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ExternalLink, Globe, CheckCircle, Monitor, Tablet, Smartphone } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Globe, CheckCircle, Monitor, Tablet, Smartphone, ChevronDown } from 'lucide-react';
 import { Site } from '../types/Site';
 import { PricingCard } from './PricingCard';
 import { SiteDetailSidebar } from './SiteDetailSidebar';
 import { pricingPlans } from '../data/plans';
+import { sites } from '../data/sites';
 import { Footer } from './Footer';
 
 interface SiteDetailProps {
   site: Site;
   onBack: () => void;
+  onSiteChange: (site: Site) => void;
 }
 
-export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
+export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteChange }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [viewMode, setViewMode] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
+  const [showSiteDropdown, setShowSiteDropdown] = useState(false);
 
   // Asegurar que la página inicie desde arriba
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleSiteChange = (newSite: Site) => {
+    setShowSiteDropdown(false);
+    onSiteChange(newSite);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -49,6 +56,53 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
               <span className="text-sm lg:text-base text-gray-600">
                 Viendo detalles de <span className="font-semibold">{site.name}</span>
               </span>
+              
+              {/* Site Switcher Dropdown */}
+              <div className="relative ml-4">
+                <button
+                  onClick={() => setShowSiteDropdown(!showSiteDropdown)}
+                  className="flex items-center gap-2 px-3 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+                >
+                  <span className="text-gray-700">Cambiar sitio</span>
+                  <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${showSiteDropdown ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {showSiteDropdown && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-80 overflow-y-auto">
+                    <div className="p-2">
+                      <div className="text-xs font-medium text-gray-500 uppercase tracking-wide px-3 py-2 mb-1">
+                        Seleccionar sitio
+                      </div>
+                      {sites.map((siteOption) => (
+                        <button
+                          key={siteOption.id}
+                          onClick={() => handleSiteChange(siteOption)}
+                          className={`w-full text-left px-3 py-2 rounded-md hover:bg-gray-50 transition-colors flex items-center gap-3 ${
+                            siteOption.id === site.id ? 'bg-blue-50 text-blue-700' : 'text-gray-700'
+                          }`}
+                        >
+                          <img
+                            src={siteOption.image}
+                            alt={siteOption.name}
+                            className="w-8 h-8 rounded object-cover flex-shrink-0"
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-sm truncate">
+                              {siteOption.name}
+                            </div>
+                            <div className="text-xs text-gray-500 truncate">
+                              {siteOption.category}
+                            </div>
+                          </div>
+                          {siteOption.id === site.id && (
+                            <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

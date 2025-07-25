@@ -82,6 +82,7 @@ function App() {
           <SiteDetail
             site={navigation.selectedSite}
             onBack={handleBackToCatalog}
+            onSiteSelect={handleSiteSelect}
           />
         )
       )}
