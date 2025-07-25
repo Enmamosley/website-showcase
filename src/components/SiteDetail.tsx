@@ -194,7 +194,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                     )}
                     <div className={`w-full ${
                       viewMode === 'desktop' ? 'h-[600px]' : 
-                      viewMode === 'tablet' ? 'h-[580px] flex justify-center items-center bg-gray-100' : 
+                      viewMode === 'tablet' ? 'h-[580px] flex justify-center items-center bg-gray-100 py-8' : 
                       'h-[896px] flex justify-center'
                     }`}>
                       <iframe
