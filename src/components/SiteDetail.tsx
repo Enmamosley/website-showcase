@@ -55,6 +55,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
             Viendo detalles de <span className="font-semibold">{site.name}</span>
           </span>
         </div>
+      </section>
 
       {/* Main Content */}
       <section className="section overflow-hidden pt-6 md:pt-12">
