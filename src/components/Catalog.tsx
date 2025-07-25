@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Grid, List, Sparkles } from 'lucide-react';
+import { Search, Filter, Sparkles } from 'lucide-react';
 import { Site } from '../types/Site';
 import { SiteCard } from './SiteCard';
 import { Footer } from './Footer';
