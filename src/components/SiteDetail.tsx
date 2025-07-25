@@ -147,6 +147,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                         title={`${viewMode} preview of ${site.name}`}
                       />
                     </div>
+                    </div>
                   </div>
                 </div>
               </div>
