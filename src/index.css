@@ -17,12 +17,40 @@
 
 /* Tablet Preview */
 .browser-preview-frame.tablet {
-  width: 1024px;
-  height: 768px;
+  width: 820px;
+  height: 1180px;
   transform-origin: top center;
-  transform: scale(0.7);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transform: scale(0.45);
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 8px #1a1a1a, 0 0 0 12px #333;
+  background: #1a1a1a;
+  position: relative;
+}
+
+.browser-preview-frame.tablet::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 8px;
+  background: #666;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.browser-preview-frame.tablet::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 50%;
+  border: 2px solid #555;
 }
 
 /* Mobile Preview */
