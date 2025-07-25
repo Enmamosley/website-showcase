@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ExternalLink, Globe, CheckCircle, Monitor, Tablet, Smartphone, Grid, List } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Globe, CheckCircle, Monitor, Tablet, Smartphone } from 'lucide-react';
 import { Site } from '../types/Site';
 import { PricingCard } from './PricingCard';
 import { SiteDetailSidebar } from './SiteDetailSidebar';
