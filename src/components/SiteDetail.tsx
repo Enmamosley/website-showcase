@@ -42,19 +42,17 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack }) => {
                   <span className="text-2xl lg:text-3xl font-bold text-gray-900">Splanding</span>
                 </div>
               </div>
-              <p className="text-sm lg:text-base text-gray-600 ml-12">
-                Viendo detalles de <span className="font-semibold">{site.name}</span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2 lg:gap-4">
-              <div className="flex items-center bg-gray-100 rounded-lg p-1">
-                <button className="p-2 rounded-md text-gray-400 cursor-not-allowed">
-                  <Grid className="w-3 h-3 lg:w-4 lg:h-4" />
-                </button>
-                <button className="p-2 rounded-md text-gray-400 cursor-not-allowed">
-                  <List className="w-3 h-3 lg:w-4 lg:h-4" />
-                </button>
-              </div>
+          <button
+            onClick={onBack}
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver al listado
+          </button>
+          <div className="h-6 w-px bg-gray-300" />
+          <span className="text-sm lg:text-base text-gray-600">
+            Viendo detalles de <span className="font-semibold">{site.name}</span>
+          </span>
             </div>
           </div>
         </div>
