@@ -29,7 +29,7 @@
 .browser-preview-frame.mobile {
   width: 414px;
   height: 896px;
-  transform-origin: top center;
+  transform-origin: center center;
   transform: scale(0.8);
   border-radius: 10px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
