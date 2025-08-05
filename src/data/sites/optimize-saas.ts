@@ -5,7 +5,7 @@ export const optimizeSaas: Site = {
   name: 'Optimize SaaS',
   url: 'https://optimize-astro.vercel.app',
   image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
-  description: 'Optimize Astro is expertly designed for SaaS and startup companies. Leveraging modern frameworks and enhanced with Tailwind CSS, it boasts a sophisticated, minimalist design.',
+  description: 'Optimize Astro está diseñado por expertos para empresas SaaS y startups. Cuenta con un diseño sofisticado y minimalista que fomenta una experiencia de usuario intuitiva desde la primera interacción. Su diseño contemporáneo y su excepcional velocidad de carga lo posicionan como la solución ideal para impulsar altas conversiones en sitios web de marketing SaaS.',
   category: 'SaaS',
   tags: ['SaaS', 'Startup', 'Clean', 'Trendy'],
   price: 97,
@@ -33,9 +33,6 @@ export const optimizeSaas: Site = {
     '13+ Complete Pages',
     'Search Functionality',
     'Animation on scroll',
-    'Netlify & Vercel pre-configured',
-    'MDX components auto-import',
-    'SEO Friendly',
-    'Clean folder structure'
+    'SEO Friendly'
   ]
 };
