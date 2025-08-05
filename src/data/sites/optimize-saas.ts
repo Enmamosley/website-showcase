@@ -15,7 +15,7 @@ export const optimizeSaas: Site = {
   themeVersion: '2.1.2',
   updated: '2 months ago',
   released: '6 months ago',
-  documentation: 'https://docs.themefisher.com/optimize-astro/',
+  documentation: 'https://wa.me/528122590296',
   changelog: [
     {
       version: 'v2.1.2',
