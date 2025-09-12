@@ -1,30 +1,20 @@
 export interface Site {
   id: string;
-  name: string;
+  nombre: string;
   url: string;
-  image: string;
-  description: string;
-  category: string;
-  tags: string[];
-  featured?: boolean;
-  price: number;
-  subtitle: string;
+  imagen: string;
+  descripcion: string;
+  categoria: string;
+  etiquetas: string[];
+  destacado?: boolean;
+  precio: number;
+  subtitulo: string;
   framework: string;
-  version: string;
-  themeVersion: string;
-  updated: string;
-  released: string;
-  documentation: string;
-  changelog: ChangelogEntry[];
-  keyFeatures: string[];
-  testimonial?: Testimonial;
-  bundlePromo?: BundlePromo;
-}
-
-export interface ChangelogEntry {
-  version: string;
-  date: string;
-  changes: string[];
+  pageSpeed: string;
+  lanzado: string;
+  caracteristicasClave: string[];
+  testimonio?: Testimonial;
+  promocionBundle?: BundlePromo;
 }
 
 export interface Testimonial {

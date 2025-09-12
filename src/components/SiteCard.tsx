@@ -15,8 +15,8 @@ export const SiteCard: React.FC<SiteCardProps> = ({ site, onClick }) => {
     >
       <div className="relative overflow-hidden rounded-t-xl">
         <img
-          src={site.image}
-          alt={`Screenshot of ${site.name}`}
+          src={site.imagen}
+          alt={`Screenshot of ${site.nombre}`}
           className="w-full h-28 sm:h-32 md:h-40 lg:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
@@ -26,7 +26,7 @@ export const SiteCard: React.FC<SiteCardProps> = ({ site, onClick }) => {
             <ExternalLink className="w-3 h-3 lg:w-4 lg:h-4 text-gray-700" />
           </div>
         </div>
-        {site.featured && (
+        {site.destacado && (
           <div className="absolute top-1.5 sm:top-2 lg:top-3 left-1.5 sm:left-2 lg:left-3">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-1.5 sm:px-2 lg:px-3 py-0.5 sm:py-1 rounded-full">
               Featured
@@ -38,19 +38,19 @@ export const SiteCard: React.FC<SiteCardProps> = ({ site, onClick }) => {
       <div className="p-3 sm:p-4 lg:p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 flex-1 pr-2">
-            {site.name}
+            {site.nombre}
           </h3>
           <span className="text-xs lg:text-sm text-blue-600 bg-blue-50 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md font-medium flex-shrink-0">
-            {site.category}
+            {site.categoria}
           </span>
         </div>
         
         <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3 lg:mb-4 line-clamp-2">
-          {site.description}
+          {site.descripcion}
         </p>
         
         <div className="flex flex-wrap gap-1 sm:gap-1.5 lg:gap-2 mb-2 sm:mb-3 lg:mb-4">
-          {site.tags.slice(0, 3).map((tag) => (
+          {site.etiquetas.slice(0, 3).map((tag) => (
             <span
               key={tag}
               className="inline-flex items-center gap-0.5 sm:gap-1 text-xs text-gray-500 bg-gray-100 px-1 sm:px-1.5 lg:px-2 py-0.5 lg:py-1 rounded-md"
@@ -59,9 +59,9 @@ export const SiteCard: React.FC<SiteCardProps> = ({ site, onClick }) => {
               {tag}
             </span>
           ))}
-          {site.tags.length > 3 && (
+          {site.etiquetas.length > 3 && (
             <span className="text-xs text-gray-400 px-0.5 sm:px-1">
-              +{site.tags.length - 3} more
+              +{site.etiquetas.length - 3} more
             </span>
           )}
         </div>

@@ -95,7 +95,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
               </button>
               <div className="hidden sm:block h-6 w-px bg-gray-300" />
               <span className="text-xs sm:text-sm lg:text-base text-gray-600">
-                Viendo: <span className="font-semibold">{site.name}</span>
+                Viendo: <span className="font-semibold">{site.nombre}</span>
               </span>
               
               {/* Site Switcher Dropdown */}
@@ -123,16 +123,16 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                           }`}
                         >
                           <img
-                            src={siteOption.image}
-                            alt={siteOption.name}
+                            src={siteOption.imagen}
+                            alt={siteOption.nombre}
                             className="w-6 h-6 sm:w-8 sm:h-8 rounded object-cover flex-shrink-0"
                           />
                           <div className="flex-1 min-w-0">
                             <div className="font-medium text-xs sm:text-sm truncate">
-                              {siteOption.name}
+                              {siteOption.nombre}
                             </div>
                             <div className="text-xs text-gray-500 truncate hidden sm:block">
-                              {siteOption.category}
+                              {siteOption.categoria}
                             </div>
                           </div>
                           {siteOption.id === site.id && (
@@ -239,13 +239,13 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                       'h-[400px] sm:h-[580px] flex justify-center items-center bg-gray-100 py-4 sm:py-8'
                     }`}>
                       <iframe
-                        id={`${site.name.toLowerCase().replace(/\s+/g, '-')}-preview`}
+                        id={`${site.nombre.toLowerCase().replace(/\s+/g, '-')}-preview`}
                         src={site.url}
                         className={`browser-preview-frame ${viewMode}`}
                         sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation"
                         loading="lazy"
                         onLoad={() => setIframeLoaded(true)}
-                        title={`${viewMode} preview of ${site.name}`}
+                        title={`${viewMode} preview of ${site.nombre}`}
                       />
                     </div>
                   </div>
@@ -259,12 +259,12 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                 </h3>
                 <div className="prose prose-gray max-w-none">
                   <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-4 lg:mb-6">
-                    {site.description}
+                    {site.descripcion}
                   </p>
                   
                   <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">Características principales</h4>
                   <ul className="space-y-2 lg:space-y-3 text-sm lg:text-base text-gray-600">
-                    {site.keyFeatures.map((feature, index) => (
+                    {site.caracteristicasClave.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2 sm:gap-3">
                         <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
@@ -300,7 +300,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
               <PricingCard 
                 key={plan.id} 
                 plan={plan} 
-                siteName={plan.id === 'individual' ? site.name : undefined}
+                siteName={plan.id === 'individual' ? site.nombre : undefined}
               />
             ))}
           </div>

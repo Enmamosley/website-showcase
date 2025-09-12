@@ -8,7 +8,6 @@ interface SiteDetailSidebarProps {
 
 export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) => {
   const [showContactForm, setShowContactForm] = useState(false);
-  const [showChangelog, setShowChangelog] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,7 +34,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6">
         <div className="mb-6">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
-            {site.name}
+            {site.nombre}
           </h1>
 
           <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
@@ -85,45 +84,17 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
         <div className="p-4 sm:p-6">
           <div className="space-y-3 sm:space-y-5">
             <div className="flex items-center justify-between py-1">
-              <span className="text-sm sm:text-base text-gray-600">Actualizado:</span>
-              <span className="font-medium text-gray-900 text-sm sm:text-base">{site.updated}</span>
-            </div>
-            <div className="flex items-center justify-between py-1">
               <span className="text-sm sm:text-base text-gray-600">Lanzado:</span>
-              <span className="font-medium text-gray-900 text-sm sm:text-base">{site.released}</span>
+              <span className="font-medium text-gray-900 text-sm sm:text-base">{site.lanzado}</span>
             </div>
             <div className="flex items-center justify-between py-1">
               <span className="text-sm sm:text-base text-gray-600">Tipo:</span>
-              <span className="font-medium text-gray-900 uppercase text-sm sm:text-base">{site.category}</span>
-            </div>
-            <div className="flex items-center justify-between py-1">
-              <span className="text-sm sm:text-base text-gray-600">Versión:</span>
-              <span className="font-medium text-gray-900 text-sm sm:text-base">{site.version}</span>
+              <span className="font-medium text-gray-900 uppercase text-sm sm:text-base">{site.categoria}</span>
             </div>
             <div className="flex items-center justify-between py-1">
               <span className="text-sm sm:text-base text-gray-600">PageSpeed:</span>
-              <span className="font-medium text-gray-900 text-sm sm:text-base">{site.themeVersion}</span>
+              <span className="font-medium text-gray-900 text-sm sm:text-base">{site.pageSpeed}</span>
             </div>
-            <div className="flex items-center justify-between py-1">
-              <span className="text-sm sm:text-base text-gray-600">Changelog:</span>
-              <button 
-                onClick={() => setShowChangelog(!showChangelog)}
-                className="bg-blue-100 text-blue-600 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md text-xs sm:text-sm font-medium hover:bg-blue-200 transition-colors"
-              >
-                Mostrar →
-              </button>
-            </div>
-          </div>
-
-          <div className="mt-6 pt-6 border-t border-gray-200 text-center">
-            <a
-              href={site.documentation}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 border-2 border-blue-600 px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-block text-sm sm:text-base"
-            >
-              Ver Documentación
-            </a>
           </div>
         </div>
       </div>
@@ -164,7 +135,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6">
         <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Tags</h4>
         <div className="flex flex-wrap gap-1.5 sm:gap-2">
-          {site.tags.map((tag) => (
+          {site.etiquetas.map((tag) => (
             <span
               key={tag}
               className="inline-flex items-center gap-1 text-xs sm:text-sm text-gray-600 bg-gray-100 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg hover:bg-gray-200 transition-colors"
@@ -175,43 +146,6 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
           ))}
         </div>
       </div>
-
-      {/* Changelog Modal */}
-      {showChangelog && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">Changelog</h3>
-                <button
-                  onClick={() => setShowChangelog(false)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  ✕
-                </button>
-              </div>
-              <div className="space-y-4">
-                {site.changelog.map((entry, index) => (
-                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-medium text-gray-900">{entry.version}</span>
-                      <span className="text-sm text-gray-500">{entry.date}</span>
-                    </div>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {entry.changes.map((change, changeIndex) => (
-                        <li key={changeIndex} className="flex items-start gap-2">
-                          <span className="text-green-500 mt-1">•</span>
-                          <span>{change}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Contact Form Modal */}
       {showContactForm && (
@@ -257,7 +191,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="similar">Similar a {site.name}</option>
+                      <option value="similar">Similar a {site.nombre}</option>
                       <option value="custom">Diseño Personalizado</option>
                       <option value="redesign">Rediseño de Sitio Web</option>
                       <option value="maintenance">Mantenimiento de Sitio Web</option>

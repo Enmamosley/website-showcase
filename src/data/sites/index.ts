@@ -6,14 +6,15 @@ const siteModules = import.meta.glob('./*.ts', { eager: true });
 // Extraer todos los sitios exportados de los módulos
 export const sites: Site[] = [];
 
-Object.values(siteModules).forEach((module: any) => {
+Object.values(siteModules).forEach((module) => {
   // Buscar todas las exportaciones que sean objetos Site válidos
-  Object.values(module).forEach((exportedValue: any) => {
+  Object.values(module as Record<string, unknown>).forEach((exportedValue) => {
     if (exportedValue && 
         typeof exportedValue === 'object' && 
-        exportedValue.id && 
-        exportedValue.name && 
-        exportedValue.url) {
+        exportedValue !== null &&
+        'id' in exportedValue &&
+        'nombre' in exportedValue && 
+        'url' in exportedValue) {
       sites.push(exportedValue as Site);
     }
   });

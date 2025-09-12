@@ -15,23 +15,23 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const categories = useMemo(() => {
-    const cats = ['All', ...new Set(sites.map(site => site.category))];
+    const cats = ['All', ...new Set(sites.map(site => site.categoria))];
     return cats;
   }, [sites]);
 
   const filteredSites = useMemo(() => {
     return sites.filter(site => {
-      const matchesSearch = site.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           site.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           site.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesSearch = site.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           site.descripcion.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           site.etiquetas.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       
-      const matchesCategory = selectedCategory === 'All' || site.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'All' || site.categoria === selectedCategory;
       
       return matchesSearch && matchesCategory;
     });
   }, [sites, searchTerm, selectedCategory]);
 
-  const featuredSites = sites.filter(site => site.featured);
+  const featuredSites = sites.filter(site => site.destacado);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
