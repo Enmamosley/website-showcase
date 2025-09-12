@@ -1,8 +1,19 @@
 import React from 'react';
 import { Globe, Heart, ExternalLink } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (page: 'contact' | 'support' | 'terms' | 'privacy') => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const currentYear = new Date().getFullYear();
+
+  const handleNavigation = (page: 'contact' | 'support' | 'terms' | 'privacy') => {
+    if (onNavigate) {
+      onNavigate(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-white border-t border-gray-100 mt-auto">
@@ -23,24 +34,26 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <div className="flex items-center gap-4 text-sm text-gray-600">
               <a 
-                href="#" 
-                className="hover:text-blue-600 transition-colors"
+                href="https://mosley.mx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors flex items-center gap-1"
               >
                 Sobre mi
+                <ExternalLink className="w-3 h-3" />
               </a>
-              <a 
-                href="#" 
+              <button 
+                onClick={() => handleNavigation('contact')}
                 className="hover:text-blue-600 transition-colors"
               >
                 Contacto
-              </a>
-              <a 
-                href="#" 
-                className="hover:text-blue-600 transition-colors flex items-center gap-1"
+              </button>
+              <button 
+                onClick={() => handleNavigation('support')}
+                className="hover:text-blue-600 transition-colors"
               >
                 Soporte
-                <ExternalLink className="w-3 h-3" />
-              </a>
+              </button>
             </div>
             
             <div className="flex items-center gap-1 text-sm text-gray-500">
@@ -55,15 +68,21 @@ export const Footer: React.FC = () => {
         <div className="mt-6 pt-6 border-t border-gray-100">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-gray-500">
             <div className="mb-2 sm:mb-0">
-              <span>Todos los derechos resevados</span>
+              <span>© {currentYear} Todos los derechos reservados</span>
             </div>
             <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-gray-700 transition-colors">
+              <button 
+                onClick={() => handleNavigation('privacy')}
+                className="hover:text-gray-700 transition-colors"
+              >
                 Política de privacidad
-              </a>
-              <a href="#" className="hover:text-gray-700 transition-colors">
-                Terminos de servicio
-              </a>
+              </button>
+              <button 
+                onClick={() => handleNavigation('terms')}
+                className="hover:text-gray-700 transition-colors"
+              >
+                Términos de servicio
+              </button>
             </div>
           </div>
         </div>

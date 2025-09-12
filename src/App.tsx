@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { NavigationState, Site } from './types/Site';
 import { Catalog } from './components/Catalog';
 import { SiteDetail } from './components/SiteDetail';
+import { Contact } from './components/Contact';
+import { Support } from './components/Support';
+import { Terms } from './components/Terms';
+import { Privacy } from './components/Privacy';
 import { sites } from './data/sites';
 
 function App() {
@@ -70,21 +74,46 @@ function App() {
     });
   };
 
+  const handleNavigateToPage = (page: 'contact' | 'support' | 'terms' | 'privacy') => {
+    // Actualizar URL y historial
+    window.history.pushState({}, '', `/${page}`);
+    
+    // Scroll hacia arriba al navegar
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    setNavigation({
+      view: page
+    });
+  };
+
   return (
     <div className="App">
       {navigation.view === 'catalog' ? (
         <Catalog
           sites={sites}
           onSiteSelect={handleSiteSelect}
+          onNavigate={handleNavigateToPage}
         />
+      ) : navigation.view === 'detail' && navigation.selectedSite ? (
+        <SiteDetail
+          site={navigation.selectedSite}
+          onBack={handleBackToCatalog}
+          onSiteSelect={handleSiteSelect}
+        />
+      ) : navigation.view === 'contact' ? (
+        <Contact onBack={handleBackToCatalog} />
+      ) : navigation.view === 'support' ? (
+        <Support onBack={handleBackToCatalog} />
+      ) : navigation.view === 'terms' ? (
+        <Terms onBack={handleBackToCatalog} />
+      ) : navigation.view === 'privacy' ? (
+        <Privacy onBack={handleBackToCatalog} />
       ) : (
-        navigation.selectedSite && (
-          <SiteDetail
-            site={navigation.selectedSite}
-            onBack={handleBackToCatalog}
-            onSiteSelect={handleSiteSelect}
-          />
-        )
+        <Catalog
+          sites={sites}
+          onSiteSelect={handleSiteSelect}
+          onNavigate={handleNavigateToPage}
+        />
       )}
     </div>
   );

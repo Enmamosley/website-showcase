@@ -7,9 +7,10 @@ import { Footer } from './Footer';
 interface CatalogProps {
   sites: Site[];
   onSiteSelect: (site: Site) => void;
+  onNavigate?: (page: 'contact' | 'support' | 'terms' | 'privacy') => void;
 }
 
-export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
+export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect, onNavigate }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -156,7 +157,7 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect }) => {
         )}
       </section>
 
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 };

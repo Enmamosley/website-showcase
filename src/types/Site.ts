@@ -34,6 +34,6 @@ export interface BundlePromo {
 }
 
 export interface NavigationState {
-  view: 'catalog' | 'detail';
+  view: 'catalog' | 'detail' | 'contact' | 'support' | 'terms' | 'privacy';
   selectedSite?: Site;
 }
