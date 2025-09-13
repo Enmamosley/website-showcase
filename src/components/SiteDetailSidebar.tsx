@@ -100,23 +100,23 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
       </div>
 
       {/* Testimonial */}
-      {site.testimonial && (
+      {site.testimonio && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6">
           <blockquote className="text-sm sm:text-base text-gray-600 italic mb-4 sm:mb-6 leading-relaxed">
-            "{site.testimonial.quote}"
+            "{site.testimonio.quote}"
           </blockquote>
           <div className="flex items-center gap-3">
             <img
-              src={site.testimonial.avatar}
-              alt={site.testimonial.author}
+              src={site.testimonio.avatar}
+              alt={site.testimonio.author}
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
             />
             <div>
               <div className="font-medium text-gray-900 flex items-center gap-1 text-sm sm:text-base">
-                {site.testimonial.author}
-                {site.testimonial.link && (
+                {site.testimonio.author}
+                {site.testimonio.link && (
                   <a
-                    href={site.testimonial.link}
+                    href={site.testimonio.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:text-blue-600"
@@ -125,7 +125,7 @@ export const SiteDetailSidebar: React.FC<SiteDetailSidebarProps> = ({ site }) =>
                   </a>
                 )}
               </div>
-              <div className="text-xs sm:text-sm text-gray-500">{site.testimonial.role}</div>
+              <div className="text-xs sm:text-sm text-gray-500">{site.testimonio.role}</div>
             </div>
           </div>
         </div>

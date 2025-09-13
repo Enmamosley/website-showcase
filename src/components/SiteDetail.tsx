@@ -173,11 +173,11 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                       </div>
                       
                       {/* Preview Controls in Header */}
-                      <div className="hidden md:flex items-center justify-end flex-1">
-                        <div className="flex items-center bg-white rounded-md p-0.5 shadow-sm border border-gray-200 mr-3">
+                      <div className="flex items-center justify-end flex-1">
+                        <div className="flex items-center bg-white rounded-md p-0.5 shadow-sm border border-gray-200 mr-1 sm:mr-3">
                           <button
                             onClick={() => setViewMode('desktop')}
-                            className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs font-medium transition-all duration-200 ${
+                            className={`flex items-center gap-1 sm:gap-1.5 px-1 sm:px-2 py-1 rounded text-xs font-medium transition-all duration-200 ${
                               viewMode === 'desktop' 
                                 ? 'bg-blue-600 text-white shadow-sm' 
                                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -189,7 +189,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                           </button>
                           <button
                             onClick={() => setViewMode('tablet')}
-                            className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs font-medium transition-all duration-200 ${
+                            className={`flex items-center gap-1 sm:gap-1.5 px-1 sm:px-2 py-1 rounded text-xs font-medium transition-all duration-200 ${
                               viewMode === 'tablet' 
                                 ? 'bg-blue-600 text-white shadow-sm' 
                                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -201,7 +201,7 @@ export const SiteDetail: React.FC<SiteDetailProps> = ({ site, onBack, onSiteSele
                           </button>
                           <button
                             onClick={() => setViewMode('mobile')}
-                            className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs font-medium transition-all duration-200 ${
+                            className={`flex items-center gap-1 sm:gap-1.5 px-1 sm:px-2 py-1 rounded text-xs font-medium transition-all duration-200 ${
                               viewMode === 'mobile' 
                                 ? 'bg-blue-600 text-white shadow-sm' 
                                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'

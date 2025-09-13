@@ -39,8 +39,8 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect, onNavigat
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-100">
         <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 lg:py-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="mb-4 md:mb-0">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div className="mb-3 sm:mb-0">
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                 Splanding
               </h1>
@@ -48,23 +48,31 @@ export const Catalog: React.FC<CatalogProps> = ({ sites, onSiteSelect, onNavigat
                 Descubra sitios web hermosos y modernos diseñados con atención al detalle.
               </p>
             </div>
-            <div className="flex items-center gap-2 lg:gap-4">
-              <div className="flex items-center bg-gray-100 rounded-lg p-1">
+            <div className="flex items-center justify-center sm:justify-end gap-2 lg:gap-4">
+              <div className="flex items-center bg-blue-50 rounded-lg p-1 border border-blue-200 shadow-sm">
                 <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'grid' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600'
+                  onClick={() => {
+                    console.log('Switching to grid view');
+                    setViewMode('grid');
+                  }}
+                  className={`p-2 sm:p-3 rounded-md transition-colors ${
+                    viewMode === 'grid' ? 'bg-blue-600 text-white shadow-sm' : 'text-blue-600 hover:text-blue-800 hover:bg-blue-100'
                   }`}
+                  title="Vista en cuadrícula"
                 >
-                  <Grid className="w-3 h-3 lg:w-4 lg:h-4" />
+                  <Grid className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-white text-blue-600 shadow-sm' : 'text-gray-600'
+                  onClick={() => {
+                    console.log('Switching to list view');
+                    setViewMode('list');
+                  }}
+                  className={`p-2 sm:p-3 rounded-md transition-colors ${
+                    viewMode === 'list' ? 'bg-blue-600 text-white shadow-sm' : 'text-blue-600 hover:text-blue-800 hover:bg-blue-100'
                   }`}
+                  title="Vista en lista"
                 >
-                  <List className="w-3 h-3 lg:w-4 lg:h-4" />
+                  <List className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </div>
             </div>
