@@ -20,7 +20,7 @@ export const pricingPlans: Plan[] = [
       { text: '🎯 Dominio personalizado gratis', included: false }
     ],
     buttonText: 'Comprar Ahora',
-    buttonLink: 'https://wa.me/528122590296?text=Hola,%20me%20interesa%20el%20plan%20Básico%20de%20$1,999',
+    buttonLink: 'https://wa.me/528125060903?text=Hola,%20me%20interesa%20el%20plan%20Básico%20de%20$1,999',
     buttonStyle: 'default'
   },
   {
@@ -42,7 +42,7 @@ export const pricingPlans: Plan[] = [
       { text: '🎯 Dominio personalizado gratis', included: false }
     ],
     buttonText: 'Comprar Ahora',
-    buttonLink: 'https://wa.me/528122590296?text=Hola,%20me%20interesa%20el%20plan%20Pro%20de%20$2,999',
+    buttonLink: 'https://wa.me/528125060903?text=Hola,%20me%20interesa%20el%20plan%20Pro%20de%20$2,999',
     buttonStyle: 'default'
   },
   {
@@ -67,7 +67,7 @@ export const pricingPlans: Plan[] = [
       { text: '🎯 Dominio personalizado gratis', included: true }
     ],
     buttonText: 'Comprar Ahora',
-    buttonLink: 'https://wa.me/528122590296?text=Hola,%20me%20interesa%20el%20plan%20Pro%20Plus%20de%20$4,999%20(33%%20OFF)',
+    buttonLink: 'https://wa.me/528125060903?text=Hola,%20me%20interesa%20el%20plan%20Pro%20Plus%20de%20$4,999%20(33%%20OFF)',
     buttonStyle: 'popular'
   },
   {
@@ -91,7 +91,7 @@ export const pricingPlans: Plan[] = [
       { text: '🎯 Dominio personalizado gratis', included: true }
     ],
     buttonText: 'Comprar Ahora',
-    buttonLink: 'https://wa.me/528122590296?text=Hola,%20me%20interesa%20el%20plan%20Pro%20Ecommerce%20de%20$6,999%20(40%%20OFF)',
+    buttonLink: 'https://wa.me/528125060903?text=Hola,%20me%20interesa%20el%20plan%20Pro%20Ecommerce%20de%20$6,999%20(40%%20OFF)',
     buttonStyle: 'default'
   }
 ];
