@@ -9,11 +9,8 @@ export const safeshieldSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Software', 'IT'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '5 months ago',
+  pageSpeed: '97/100',
+  lanzado: '8 meses atrás',
   caracteristicasClave: [
     "13+ Páginas Premium",
     "Altamente personalizable",
@@ -26,12 +23,5 @@ export const safeshieldSaas: Site = {
     "Amigable con SEO",
     "Animaciones al hacer scroll",
     "Documentación detallada"
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

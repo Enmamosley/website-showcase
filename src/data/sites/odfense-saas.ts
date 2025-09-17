@@ -9,11 +9,8 @@ export const odfenseSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'IT', 'Software'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '5 months ago',
+  pageSpeed: '98/100',
+  lanzado: '6 meses atrás',
   caracteristicasClave: [
     'Más de 13 páginas premium',
     '100/100 Google PageSpeed en escritorio',
@@ -27,12 +24,5 @@ export const odfenseSaas: Site = {
     'Compatible con todos los navegadores modernos',
     'SEO Friendly',
     'Animación al desplazarse (scrol)', 
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

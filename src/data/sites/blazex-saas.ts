@@ -9,11 +9,8 @@ export const blazexSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '6 months ago',
+  pageSpeed: '96/100',
+  lanzado: '4 meses atrás',
   caracteristicasClave: [
     'Sitio web completo listo para vender tu producto',
     'Diseño que genera confianza y aumenta las conversiones',
@@ -24,11 +21,5 @@ export const blazexSaas: Site = {
     'Listo para usar en menos de 24 horas',
     'Soporte técnico incluido para tu tranquilidad',
   ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  
 };

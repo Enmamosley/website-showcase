@@ -9,11 +9,8 @@ export const saasproSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup'],
   destacado: false,
-  precio: 77,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '5 month ago',
+  pageSpeed: '93/100',
+  lanzado: '3 meses atrás',
   caracteristicasClave: [
     'Sitio web completo optimizado para generar ventas',
     'Páginas que destacan los beneficios de tu producto',
@@ -25,12 +22,5 @@ export const saasproSaas: Site = {
     'Mejor posicionamiento en Google automáticamente',
     'Animaciones que capturan la atención',
     'Soporte técnico completo incluido',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

@@ -9,11 +9,8 @@ export const spydeaSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup', 'Agency'],
   destacado: false,
-  precio: 77,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '4.1.0',
-  lanzado: '6 months ago',
+  pageSpeed: '95/100',
+  lanzado: '7 meses atrás',
   caracteristicasClave: [
     'Sitio web completo que posiciona tu agencia como líder',
     'Páginas que destacan tus mejores casos de éxito',
@@ -26,12 +23,5 @@ export const spydeaSaas: Site = {
     'Animaciones que capturan la atención del cliente',
     'Iconografía profesional incluida',
     'Soporte completo para cualquier consulta',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

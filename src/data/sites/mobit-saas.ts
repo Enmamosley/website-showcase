@@ -9,11 +9,8 @@ export const mobitSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Software', 'Mobile App'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '6 month ago',
+  pageSpeed: '93/100',
+  lanzado: '8 meses atrás',
   caracteristicasClave: [
     'Sitio web que aumenta las descargas de tu app',
     'Páginas que destacan las ventajas de tu software',
@@ -26,11 +23,4 @@ export const mobitSaas: Site = {
     'Listo para promocionar tu app inmediatamente',
     'Soporte técnico incluido',
   ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
 };

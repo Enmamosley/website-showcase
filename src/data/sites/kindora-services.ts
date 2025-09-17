@@ -9,11 +9,8 @@ export const kindoraServices: Site = {
   categoria: 'Services',
   etiquetas: ['Donations', 'NGO'],
   destacado: false,
-  precio: 67,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '1.0.0',
-  lanzado: '5 months ago',
+  pageSpeed: '97/100',
+  lanzado: '3 meses atrás',
   caracteristicasClave: [
     'Sitio web completo que aumenta las donaciones',
     'Páginas que comunican tu misión de manera emotiva',
@@ -26,12 +23,5 @@ export const kindoraServices: Site = {
     'Mejor posicionamiento en Google para más visibilidad',
     'Listo para usar en pocas horas',
     'Soporte técnico incluido',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

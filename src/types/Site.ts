@@ -7,14 +7,10 @@ export interface Site {
   categoria: string;
   etiquetas: string[];
   destacado?: boolean;
-  precio: number;
-  subtitulo: string;
-  framework: string;
   pageSpeed: string;
   lanzado: string;
   caracteristicasClave: string[];
   testimonio?: Testimonial;
-  promocionBundle?: BundlePromo;
 }
 
 export interface Testimonial {
@@ -23,14 +19,6 @@ export interface Testimonial {
   role: string;
   avatar: string;
   link?: string;
-}
-
-export interface BundlePromo {
-  title: string;
-  description: string;
-  price: string;
-  buttonText: string;
-  link: string;
 }
 
 export interface NavigationState {

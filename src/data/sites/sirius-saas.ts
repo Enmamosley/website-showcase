@@ -9,11 +9,8 @@ export const siriusSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup'],
   destacado: false,
-  precio: 77,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '6 month ago',
+  pageSpeed: '94/100',
+  lanzado: '6 meses atrás',
   caracteristicasClave: [
     'Más de 17 páginas premium',
     'Puntuación de 98/100 en Google PageSpeed (escritorio)',
@@ -24,12 +21,5 @@ export const siriusSaas: Site = {
     'Formulario de contacto integrado',
     'Imágenes, CSS y JS optimizados con Astro',
     'Documentación detallada',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

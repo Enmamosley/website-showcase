@@ -9,11 +9,8 @@ export const syncmasterSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '1.1.0',
-  lanzado: '6 months ago',
+  pageSpeed: '98/100',
+  lanzado: '5 meses atrás',
   caracteristicasClave: [
     'Sitio web ultrarrápido que mantiene a tus usuarios',
     'Diseño que se adapta perfectamente a tu marca',
@@ -24,12 +21,5 @@ export const syncmasterSaas: Site = {
     'Formularios optimizados para capturar leads',
     'Instalación simple sin complicaciones técnicas',
     'Soporte completo incluido',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

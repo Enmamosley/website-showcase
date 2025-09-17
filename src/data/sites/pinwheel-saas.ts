@@ -9,11 +9,8 @@ export const pinwheelSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Business'],
   destacado: false,
-  precio: 17,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '3.2.0',
-  lanzado: '1 month ago',
+  pageSpeed: '96/100',
+  lanzado: '9 meses atrás',
   caracteristicasClave: [
     '17+ páginas prediseñadas',
     '95+ Google PageSpeed Score', 
@@ -26,12 +23,5 @@ export const pinwheelSaas: Site = {
     'Entorno de desarrollo sencillo de configurar',
     'Compatible con todos los navegadores modernos',
     'Iconos Font Awesome incluidos',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

@@ -9,11 +9,8 @@ export const neptuneSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup', 'Agency'],
   destacado: false,
-  precio: 77,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '5 month ago',
+  pageSpeed: '99/100',
+  lanzado: '5 meses atrás',
   caracteristicasClave: [
     'Sitio web que carga súper rápido y mantiene a tus clientes',
     'Diseño que se adapta perfectamente a tu marca',
@@ -27,12 +24,5 @@ export const neptuneSaas: Site = {
     'Mejor posicionamiento en Google automáticamente',
     'Instalación simple sin complicaciones técnicas',
     'Soporte completo para cualquier duda',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

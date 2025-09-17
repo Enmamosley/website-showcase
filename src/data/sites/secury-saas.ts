@@ -9,11 +9,8 @@ export const securySaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Web3', 'Startup'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.0',
-  lanzado: '5 months ago',
+  pageSpeed: '99/100',
+  lanzado: '4 meses atrás',
   caracteristicasClave: [
     'Google PageSpeed Score 100/100 (Desktop)',
     'Altamente personalizable (Color, Fuente, Menú, Enlaces sociales, metaetiquetas SEO, etc.)',
@@ -27,12 +24,5 @@ export const securySaas: Site = {
     'Estructura de carpetas limpia',
     'Entorno de desarrollo simple y fácil de configurar',
     'Documentación detallada',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

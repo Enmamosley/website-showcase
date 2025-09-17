@@ -7,13 +7,10 @@ export const optimizeSaas: Site = {
   imagen: '/images/sites/optimize.webp',
   descripcion: 'Optimize es la elección inteligente para empresas que buscan resultados. Sitio web optimizado para conversiones que transforma visitantes en clientes y mejora tu ROI desde el primer día.',
   categoria: 'Saas',
-  etiquetas: ['SaaS', 'Startup'],
+  etiquetas: ['SaaS', 'Business'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '2.1.2',
-  lanzado: '3 months ago',
+  pageSpeed: '95/100',
+  lanzado: '4 meses atrás',
   caracteristicasClave: [
     '13+ páginas completas',
     '100/100 Google PageSpeed en escritorio',
@@ -27,12 +24,5 @@ export const optimizeSaas: Site = {
     'Optimizado para SEO',
     'Animación al desplazarse',
     'Documentación detallada',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

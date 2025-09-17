@@ -9,11 +9,8 @@ export const visionexSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup'],
   destacado: false,
-  precio: 77,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '3.1.0',
-  lanzado: '6 month ago',
+  pageSpeed: '97/100',
+  lanzado: '6 meses atrás',
   caracteristicasClave: [
     'Sitio web completo que aumenta tus suscripciones',
     'Diseño que genera confianza en tu producto',
@@ -25,12 +22,5 @@ export const visionexSaas: Site = {
     'Configuración simple - online en pocas horas',
     'Iconografía profesional incluida',
     'Soporte técnico completo',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

@@ -9,11 +9,8 @@ export const nextspacePortfolio: Site = {
   categoria: 'Portfolio',
   etiquetas: ['Architecture', 'Interior Design', 'Creativo'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '1.0.0',
-  lanzado: '4 month ago',
+  pageSpeed: '94/100',
+  lanzado: '7 meses atrás',
   caracteristicasClave: [
     'Más de 15 páginas profesionales prediseñadas (Home, Studio, Proyectos, Servicios, Blog, Contacto, etc.)',
     'Puntuación de 99 en Google PageSpeed (escritorio)',
@@ -24,12 +21,5 @@ export const nextspacePortfolio: Site = {
     'Código modular amigable para desarrolladores',
     'Formulario de contacto integrado',
     'Compatibilidad con todos los navegadores modernos',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };

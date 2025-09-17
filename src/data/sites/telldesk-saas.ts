@@ -9,11 +9,8 @@ export const telldeskSaas: Site = {
   categoria: 'Saas',
   etiquetas: ['SaaS', 'Startup'],
   destacado: false,
-  precio: 97,
-  subtitulo: 'Multilingüe',
-  framework: 'Astro + Tailwind',
-  pageSpeed: '1.1.0',
-  lanzado: '6 months ago',
+  pageSpeed: '96/100',
+  lanzado: '9 meses atrás',
   caracteristicasClave: [
     'Sitio web que carga súper rápido y retiene usuarios',
     'Diseño que se adapta perfectamente a tu marca',
@@ -23,12 +20,5 @@ export const telldeskSaas: Site = {
     'Configuración rápida - online en el mismo día',
     'Formularios que convierten visitantes en clientes',
     'Soporte técnico completo incluido',
-  ],
-  promocionBundle: {
-    title: 'Get All Business Themes!',
-    description: 'Access our complete business theme collection for only $197!',
-    price: '$197',
-    buttonText: 'Get Business Bundle',
-    link: '/bundles/business-bundle'
-  }
+  ]
 };
