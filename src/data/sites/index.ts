@@ -23,12 +23,3 @@ Object.values(siteModules).forEach((module) => {
 // Ordenar sitios por ID para consistencia
 sites.sort((a, b) => a.id.localeCompare(b.id));
 
-// También exportar sitios individuales para acceso directo si es necesario
-export * from './mosley';
-export * from './bexer-business';
-export * from './optimize-saas';
-export * from './cleaner-services';
-export * from './cloudpeak-tech';
-export * from './glasto-startup';
-export * from './portfolio-creative';
-export * from './restaurant-pro';

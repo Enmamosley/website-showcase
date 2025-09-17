@@ -173,7 +173,7 @@ export const Privacy: React.FC<PrivacyProps> = ({ onBack }) => {
               <br /><br />
               <strong>Email:</strong> privacidad@mosley.mx
               <br />
-              <strong>WhatsApp:</strong> +52 81 2259 0296
+              <strong>WhatsApp:</strong> +52 81 2506 0903
               <br />
               <strong>Dirección:</strong> Monterrey, Nuevo León, México
               <br /><br />

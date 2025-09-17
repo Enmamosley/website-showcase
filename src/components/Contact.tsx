@@ -36,7 +36,7 @@ Mensaje:
 ${formData.message}`;
 
     // Abrir WhatsApp con el mensaje
-    const whatsappUrl = `https://wa.me/528122590296?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/528125060903?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
 
     setIsSubmitted(true);

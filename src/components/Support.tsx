@@ -228,7 +228,7 @@ export const Support: React.FC<SupportProps> = ({ onBack }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/528122590296?text=Hola,%20necesito%20soporte%20técnico"
+              href="https://wa.me/528125060903?text=Hola,%20necesito%20soporte%20técnico"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors"
